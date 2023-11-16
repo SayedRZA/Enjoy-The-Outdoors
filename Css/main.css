@@ -1,4 +1,24 @@
-body {
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+section{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+
+.firstPage {
     background-image: url('/images/backgroundimg2.jpg');
     background-repeat: no-repeat;
     background-position: center;
@@ -19,13 +39,80 @@ body {
     /* border-radius: 10px; */
     
   } 
-  .btn {
+.btn {
     background-color: rgb(209, 200, 114) ;
-    margin-top: 10%;
+    margin-top: 15%;
+    
+    
+    
   }
-  h2 {
+  .btn{
+    background-color: rgb(209, 200, 114) ;
+    margin-top: 15%;
+    
+  }
+
+  h1 {
     color: rgb(255, 255, 255);
     font-size: xx-large;
     text-align-last: center;
+    
+    
 
   }
+
+  /* header .sticky {
+    padding: 5px 100px;
+    background: #fff;
+  }
+
+  header .sticky ul li a {
+    color: #000;
+
+  } */
+  .container{
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+  
+  }
+  .row{
+  
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+  
+  }
+  .col-2{
+    flex-basis: 50%;
+    min-width: 300px;
+    
+    }
+    .col-2 img{
+      max-width: 200%;
+      padding: 50px 0;
+      
+     
+      
+    }
+    .col-2 h1{
+      font-size: 50px;
+      line-height: 60px;
+      margin: 25px 0;
+     
+    }
+    .secondPage{
+        background: radial-gradient(rgb(215, 249, 255),#dadada) ;
+    }
+
+    .form-control{
+    border-radius: 12px;
+    background: repeating-conic-gradient( #002fff,  #d1afaf, #880000, rgb(204, 168, 168), rgb(0, 60, 255)) ;
+    }
+    .search{
+        border-radius: 15px;
+        background-color: #adadad;
+    }

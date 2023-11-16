@@ -16,6 +16,10 @@
     <script src="scripts/locationData.js"></script>
     <script src="scripts/mountainData.js"></script>
     <script src="scripts/Filtersearch.js"></script>
+
+    <script src="scripts/example.js"></script>
+    <link rel="stylesheet" href="Css/example.css">
+
 </head>
 <body>
 
@@ -54,10 +58,11 @@
         </div>
       </nav>
 
-
-
+<!-- 
+<section class="parkPage">
     
       <div class="container mt-2">
+        <h1 class="parkHeader">National Parks</h1>
     <select id="parkTypes" >
         <option value="">Select a Park Type</option>
         <option value="National Park">National Park</option>
@@ -75,12 +80,12 @@
         <option value="Parkway">Parkway</option>
       </select>
       
-      <button onclick="filterByParkType()">Filter</button>
+      <button onclick="filterByParkType()">Search</button>
       
       <div id="filteredResults"></div>
     </div>
 
-    <!-- -------Locations search------- -->
+    
     <div class="container mt-0">
 
     <select id="parkLocations">
@@ -90,21 +95,22 @@
         <option value=""></option>
       </select>
       
-      <button onclick="filterByLocation()">Filter</button>
+      <button onclick="filterByLocation()">Search</button>
       
       <div id="filteredLocationResults"></div>
 </div>
 
-    <!-- <div id="content" class="content">
+
+    <div id="content" class="content">
         <div class="product" id="product-1">
             <div>
-                <h4>Smartphone</h4>
+                <h4>Alabama</h4>
                 <div class="photo">
                     <img src="/images/Bond-StoryImage_3.jpg" alt="Smartphone">
-                    <h4 class="price">$499.99</h4>
+                    <h4 class="price">"tuin"</h4>
                 </div>
                 <div>
-                    <p>A powerful and feature-rich smartphone for all your communication needs.</p>
+                    <p>"Tuskegee Institute National Historic Site, 1212 West Montgomery Road"</p>
                 </div>
 
             </div>
@@ -113,7 +119,152 @@
             </div>
         </div>
         
-    </div>   -->
-   
+    </div>  
+   </section>  -->
+
+   <section>
+
+    <main id="main">
+        <div class="filter-box">
+            <h3>Filter</h3>
+
+            <div class="form-floating mb-3">
+                <select name="" id="category-select" class="form-select">
+                    <option>Show All</option>
+                    <option>Electronics</option>
+                    <option>Fashion</option>
+                    <option>Home &amp; Kitchen</option>
+
+                    <option>Alabama</option>
+                    <option>Alaska</option>
+                    <option>American Samoa</option>
+                    <option>Arizona</option>
+                    <option>Arkansas</option>
+                    <option>California</option>
+                    <option>Colorado</option>
+                    <option>Connecticut</option>
+                    <option>Delaware</option>
+                    <option>DC</option>
+                    <option>Florida</option>
+                    <option>Georgia</option>
+                    <option>Guam</option>
+                    <option>Hawaii</option>
+                    <option>Idaho</option>
+                    <option>Illinois</option>
+                    <option>Indiana</option>
+                    <option>Iowa</option>
+                    <option>Kansas</option>
+                    <option>Kentucky</option>
+                    <option>Louisiana</option>
+                    <option>Maine</option>
+                    <option>Maryland</option>
+                    <option>Massachusetts</option>
+                    <option>Michigan</option>
+                    <option>Minnesota</option>
+                    <option>Mississippi</option>
+                    <option>Missouri</option>
+                    <option>Montana</option>
+                    <option>Nebraska</option>
+                    <option>Nevada</option>
+                    <option>New Hampshire</option>
+                    <option>New Jersey</option>
+                    <option>New Mexico</option>
+                    <option>New York</option>
+                    <option>North Carolina</option>
+                    <option>North Dakota</option>
+                    <option>Ohio</option>
+                    <option>Oklahoma</option>
+                    <option>Oregon</option>
+                    <option>Pennsylvania</option>
+                    <option>Puerto Rico</option>
+                    <option>Rhode Island</option>
+                    <option>South Carolina</option>
+                    <option>South Dakota</option>
+                    <option>Tennessee</option>
+                    <option>Texas</option>
+                    <option>Utah</option>
+                    <option>Vermont</option>
+                    <option>Virgin Islands</option>
+                    <option>Virginia</option>
+                    <option>Washington</option>
+                    <option>West Virginia</option>
+                    <option>Wisconsin</option>
+                    <option>Wyoming</option>
+
+
+
+
+
+
+
+
+                </select>
+                <label for="category-select">Category</label>
+            </div>
+            <!-- <div>
+                <label for="min-price" class="form-label">Minimum Price: $ <span id="min-price-display">0</span></label>
+                <input type="range" class="form-range" id="min-price" min="0" max="750" value="0">
+            </div>
+            <div>
+                <label for="max-price" class="form-label">Maximum Price: $ <span
+                        id="max-price-display">1500</span></label>
+                <input type="range" class="form-range" id="max-price" min="750" max="1500" value="1500">
+            </div>
+
+            <div class="form-floating mb-3">
+                <select name="" id="color-select" class="form-select">
+                    <option>Show All</option>
+                    <option>Black</option>
+                    <option>Blue</option>
+                    <option>Brown</option>
+                    <option>Burgundy</option>
+                    <option>Charcoal</option>
+                    <option>Clear</option>
+                    <option>Dark BLue</option>
+                    <option>Gray</option>
+                    <option>Green</option>
+                    <option>Khaki</option>
+                    <option>Lavender</option>
+                    <option>Maroon</option>
+                    <option>Mint</option>
+                    <option>Navy</option>
+                    <option>Olive</option>
+                    <option>Orange</option>
+                    <option>Pink</option>
+                    <option>Red</option>
+                    <option>Silver</option>
+                    <option>Tan</option>
+                    <option>Teal</option>
+                    <option>Turquoise</option>
+                    <option>White</option>
+                    <option>Yellow</option>
+                </select>
+                <label for="color-select">Color</label>
+            </div> -->
+
+        </div>
+
+        <div id="content" class="content">
+            <div class="parks" id="grca">
+                <div>
+                    <h4>Arizona</h4>
+                    <div class="photo">
+                        <img src="/images/products/smartphone.jpg" alt="Arizona">
+                        <h4 class="price">$499.99</h4>
+                    </div>
+                    <div>
+                        <p>A powerful and feature-rich smartphone for all your communication needs.</p>
+                    </div>
+
+                </div>
+                <div class="add-button">
+                    <button class="btn btn-success">Add to Cart</button>
+                </div>
+            </div>
+            
+        </div>  
+    </main>
+
+   </section>
 </body>
 </html>
