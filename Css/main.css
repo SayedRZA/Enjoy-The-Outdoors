@@ -39,27 +39,40 @@ section{
     /* border-radius: 10px; */
     
   } 
-.btn {
-    background-color: rgb(209, 200, 114) ;
-    margin-top: 15%;
-    
-    
-    
-  }
-  .btn{
-    background-color: rgb(209, 200, 114) ;
-    margin-top: 15%;
+
+
+
+.mtn {
+    background: linear-gradient(to right,#87d1c1, #73a086, #73a079, #87c0c0  ) ;
+    /* margin-top: 15%; */
+    min-width: 250px;
+    border-radius: 15px;
     
   }
+  
+  .mtn:hover{
+  
+      background-color: #ffbf00;
+
+  }
+
 
   h1 {
     color: rgb(255, 255, 255);
     font-size: xx-large;
     text-align-last: center;
-    
-    
+    margin-top: 15px;
+    }
 
-  }
+.h12{
+    color: rgb(255, 255, 255);
+    font-size: xx-large;
+    text-align-last: center;
+
+    filter: blur(3px);
+    
+}
+
 
   /* header .sticky {
     padding: 5px 100px;
@@ -70,6 +83,8 @@ section{
     color: #000;
 
   } */
+
+
   .container{
     max-width: 1300px;
     margin: auto;
@@ -110,7 +125,7 @@ section{
 
     .form-control{
     border-radius: 12px;
-    background: repeating-conic-gradient( #002fff,  #d1afaf, #880000, rgb(204, 168, 168), rgb(0, 60, 255)) ;
+    background: repeating-conic-gradient( #000000,  #da0000, #000000, rgb(214, 0, 0), rgb(0, 0, 0)) ;
     }
     .search{
         border-radius: 15px;
