@@ -109,6 +109,7 @@ section{
     .col-2 img{
       max-width: 200%;
       padding: 50px 0;
+      align-items: center;
       
      
       
@@ -127,7 +128,7 @@ section{
     border-radius: 12px;
     background: repeating-conic-gradient( #000000,  #da0000, #000000, rgb(214, 0, 0), rgb(0, 0, 0)) ;
     }
-    .search{
+  .search{
         border-radius: 15px;
         background-color: #adadad;
     }

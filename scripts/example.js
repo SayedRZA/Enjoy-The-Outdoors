@@ -45,27 +45,75 @@
         // clear all elements
         parksContainer.innerHTML = "";
     
-        parksFilter.forEach(parksFilter => {
+        parksFilter.forEach(parksFilters => {
     
-            displayPark(parksFilter, parksContainer)
+            displayParks(parksFilters, parksContainer);
             
         });
     }
 
     
-    function displayProduct(parks, parentDiv) {
-        // create a div for each product
-        const productDiv = document.createElement("div");
-        productDiv.classList.add("parks") ;
-        productDiv.id = "parks-" + parks.productId ;
-        // add product to the container
-        parentDiv.appendChild(productDiv);
+//  --------------------------------
+
+        function displayNationalPark(parksFilters, parentDiv) {
+            const parksFiltersDiv = document.createElement("div");
+            parksFiltersDiv.classList.add("parksFilters");
+            parksFiltersDiv.id = "parksfilters-" + parksFilters.LocationID;
+            parentDiv.appendChild(parksFiltersDiv);
     
-        addProductHeader(product, productDiv);
-        addImageRow(product, productDiv);
-        addDescription(product, productDiv);
-        addCartButton(product, productDiv);
-    }
+            addParkHeader(parksFilters, parksFiltersDiv);
+            addParkDetails(parksFilters, parksFiltersDiv);
+            // You can add more functions here to display other details of the park
+        }
+    
+        function addParkHeader(parksFilter, parksFiltersDiv) {
+            const parkInfoDiv = document.createElement("div");
+            parksFiltersDiv.appendChild(parkInfoDiv);
+    
+            const parkHeader = document.createElement("h4");
+            parkHeader.innerText = parksFilter.LocationName;
+            parkInfoDiv.appendChild(parkHeader);
+        }
+    
+        function addParkDetails(nationalPark, parkDiv) {
+            const detailsDiv = document.createElement("div");
+            parkDiv.appendChild(detailsDiv);
+    
+            const address = document.createElement("p");
+            address.innerText = `Address: ${nationalPark.Address}, ${nationalPark.City}, ${nationalPark.State} ${nationalPark.ZipCode}`;
+            detailsDiv.appendChild(address);
+    
+            const phone = document.createElement("p");
+            phone.innerText = `Phone: ${nationalPark.Phone}`;
+            detailsDiv.appendChild(phone);
+    
+            // You can add more details such as Fax, Latitude, Longitude, etc.
+        }
+    
+        function displayNationalParks(nationalParks) {
+            const parksContainer = document.querySelector("#content");
+            parksContainer.innerHTML = "";
+    
+            nationalParks.forEach(park => {
+                displayNationalPark(park, parksContainer);
+            });
+        }
+    
+        // Call the function to initially display all national parks
+        displayNationalParks(nationalParksArray);
+  
+    
+
+
+
+
+
+
+
+
+
+
+
 
 
 
