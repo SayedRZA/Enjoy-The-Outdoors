@@ -153,3 +153,6 @@ section{
         .park-container .card {
           max-width: 300px; /* Set a maximum width for each park container */
         }
+        h3{
+          color: #dadada;
+        }
