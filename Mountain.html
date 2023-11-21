@@ -59,6 +59,10 @@
             </form>
           </div>
         </div>
+        <img
+        src="images/menu-button-of-three-horizontal-lines.png"
+      class="menu-icon"
+       onclick="menutoggle()">
       </nav>
 
 
@@ -69,7 +73,7 @@
       <!-- dropdow menu -->
         <h3>Select a Mountain</h3>
 
-        <div class="form-floating mb-3">
+        <div class="form-floating mt-3">
         
         <select class="form-select" id="mountain-select" >
           <option  >Select a mountain</option>
@@ -130,4 +134,26 @@
     </div>
   </div>
   </body>
+
+  <script>
+    var menuitems = document.getElementById("menuitems");
+  
+    menuitems.style.maxHeight = "0px";
+  
+  
+    function menutoggle(){
+  
+      if(menuitems.style.maxHeight == "0px"){
+        menuitems.style.maxHeight = "200px";
+  
+      }
+  
+      else {
+        menuitems.style.maxHeight = "0px";
+      }
+    }
+  
+  
+  
+  </script>
 </html>

@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     parkTypeSelect.addEventListener('change', parkFilter);
 }); 
 
-
+// --------- creates a filter and puts all the parks in the dropdown -------
 
 function parkTypeDropdown() {
     const parkTypeDropdown = document.getElementById("parkTypeDropdown");
@@ -24,6 +24,8 @@ function parkTypeDropdown() {
 
 }
 
+// --------- creates a filter and puts all states in the dropdown-----
+
 function stateDropdown() {
     const stateDropdown = document.querySelector('#state-dropdown');
 
@@ -35,16 +37,24 @@ function stateDropdown() {
     });
 }
 
+
+
+// ----------------- Park Filters-------
+
+
 function parkFilter() {
     // getting the values from the dropdowns
+
     const stateSelected = document.querySelector('#state-dropdown').value;
     const parkTypeSelected = document.querySelector('#parkTypeDropdown').value;
 
     // logging the data gathered
+
     console.log(`Selected park type: ${parkTypeSelected}`);
     console.log(`Selected state: ${stateSelected}`);
 
     // filtering the parks based on the dropdown values
+
     filteredParks = nationalParksArray;
 
    if (stateSelected !== 'showAll') {
@@ -58,6 +68,8 @@ function parkFilter() {
 
 }
 
+
+
 function displayParks(filteredParks) {
     const parksContain = document.querySelector('#content');
     parksContain.classList.add("text-center"); //styling the container
@@ -68,6 +80,7 @@ function displayParks(filteredParks) {
         displayPark(parkFilter, parksContain);
     });
 }
+
 
 function displayPark(parkFilter, parksContain) {
     
@@ -106,7 +119,7 @@ function displayPark(parkFilter, parksContain) {
     // setting the park button
     const parkButton = document.createElement('button');
     parkButton.classList.add('btn', 'btn-primary', 'text-center', 'm-4'); 
-    parkButton.innerText = 'Click to Checkout'; 
+    parkButton.innerText = 'Explore More'; 
 
     parkButton.addEventListener('click', () => {
         addFavorite(parkFilter.LocationID);
