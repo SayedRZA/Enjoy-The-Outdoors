@@ -58,31 +58,3 @@ const locationsArray = [
 
 ];
 
-// function filterByLocation() {
-// const selectedLocation = document.getElementById('parkLocations').value;
-
-// const filteredParks = locationsArray.filter(park =>
-//   selectedLocation ? park.State === selectedLocation : true
-// );
-
-// displayFilteredLocationResults(filteredParks);
-// }
-
-// function displayFilteredLocationResults(results) {
-// const filteredResultsDiv = document.getElementById('filteredLocationResults');
-// filteredResultsDiv.innerHTML = '';
-
-// if (results.length === 0) {
-//   filteredResultsDiv.innerHTML = 'No parks found in the selected location.';
-//   return;
-// }
-
-// const ul = document.createElement('ul');
-// results.forEach(result => {
-//   const li = document.createElement('li');
-//   li.textContent = result.LocationName;
-//   ul.appendChild(li);
-// });
-
-// filteredResultsDiv.appendChild(ul);
-// }

@@ -1,120 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enjoy the outdoors</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parks Page</title>
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/lux/bootstrap.min.css" integrity="sha384-9+PGKSqjRdkeAU7Eu4nkJU8RFaH8ace8HGXnkiKMP9I9Te0GJ4/km3L1Z8tXigpG" crossorigin="anonymous">
     
 
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/lux/bootstrap.min.css" integrity="sha384-9+PGKSqjRdkeAU7Eu4nkJU8RFaH8ace8HGXnkiKMP9I9Te0GJ4/km3L1Z8tXigpG" crossorigin="anonymous">
-        
-   
-    <link rel="stylesheet" href="Css/main.css">
+    <!-- Link to your JavaScript file -->
     <script src="scripts/locationData.js"></script>
-    <script src="scripts/mountainData.js"></script>
-    <script src="scripts/Filtersearch.js"></script>
-    <script src="scripts/statesfilter.js"></script>
-
+    <script src="scripts/nationalParkData.js"></script>
+    <script src="scripts/stateFunction.js"></script>
+    <script src="scripts/parkTypeData.js"></script>
     <script src="scripts/example.js"></script>
-    <link rel="stylesheet" href="Css/example.css">
 
-</head>
-<body>
 
-    <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+    <link rel="stylesheet" href="Css/example.css" />
+    <link rel="stylesheet" href="Css/main.css">
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Humantivities</a>
+            <!-- <div class="p-4">
+            <img src="images/Humantivities logo.png" alt="">
+            </div> -->
+             
+          <a class="navbar-brand" href="#">Humantivities  <i class="bi bi-universal-access"></i></a>
+         
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarColor01">
             <ul class="navbar-nav me-auto">
               <li class="nav-item">
-                <a class="nav-link active" href="#">Home
+                <a class="nav-link active" href="#">Home  <i class="bi bi-house-fill"></i>
                   <span class="visually-hidden">(current)</span>
                 </a>
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" href="#">Features</a>
+                <a class="nav-link" href="#">National Parks  <i class="bi bi-globe"></i></a>
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" href="#">Pricing</a>
+                <a class="nav-link" href="#">Mountains  <i class="bi bi-image-alt"></i></a>
+                
               </li>
-
-              <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
-              </li>
-           
+    
             </ul>
             <form class="d-inline-flex">
               <input class="form-control me-sm-2" type="search" placeholder="Search">
-              <button class="btn btn-secondary my-2 my-sm-0 p-2" type="submit">Search</button>
+              <button class="search btn btn-secondary my-2 my-sm-0 p-2" type="submit"><i class="bi bi-search"></i></button>
             </form>
           </div>
         </div>
       </nav>
 
 
+    <main>
+      <!-- filter boxes -->
+      <div class="filter-box">
+        <h3>Filter</h3>
 
-   <section>
-
-    <main id="main">
-        <div class="filter-box">
-            <h3>Search</h3>
-
-            <div class="form-floating mb-3">
-                <select name="" id="state-select" class="form-select">
-                    <option>Show All</option>
-                </select>
-
-
-
-                <label for="state-select">States</label>
-            </div>
-           
-
-            <div class="form-floating mb-3">
-                <select name="" id="parkType-select" class="form-select">
-                    <option>Show All</option>
-                
-                </select>
-                <label for="parkType-select">Parks</label>
-            </div>
-
+        <div class="form-floating mb-3">
+          <select name="" id="state-dropdown" class="form-select">
+            <option value="showAll">Select State</option>
+          </select>
+          <label for="category-select">State/Location</label>
         </div>
 
-<template id="parktemplate">
+        <div class="form-floating mb-3">
+          <select name="" id="parkTypeDropdown" class="form-select">
+            <option value="showAll">Select Park Type</option>
+          </select>
+          <label for="parkTypeSelect">Park Type</label>
+        </div>
+      </div>
 
-        <div id="content" class="content">
-            <div class="parksFilters" id="grca">
-                <div>
-                    <h4>Arizona</h4>
-                    <div class="photo">
-                        <img src="" alt="Arizona">
-                        <h4 class="LocationName">Chiricahua National Monument</h4>
-                    </div>
-                    <div>
-                        <p>A powerful and feature-rich smartphone for all your communication needs.</p> 
-                    </div>
-
-                </div>
-                <div class="add-button">
-                    <button class="btn btn-success">Add to Cart</button>
-                </div>
+      <!-- content items -->
+      <div id="content" class="content">
+        <div class="product" id="product-1">
+          <div>
+            <h4>Smartphone</h4>
+            <div class="photo">
+              <img src="media/just.logo.png" alt="Smartphone" />
+              <h4 class="price">$499.99</h4>
             </div>
-            
-        </div>  
+            <div>
+              <p>
+                A powerful and feature-rich smartphone for all your
+                communication needs.
+              </p>
+            </div>
+          </div>
+          <div class="add-button">
+            <button class="btn btn-success">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </main>
 
-    </template>
- 
     
-   
-
-   </section>
-</body>
+  </body>
 </html>
