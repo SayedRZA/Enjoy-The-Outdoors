@@ -133,7 +133,7 @@ section{
 
     .form-control{
     border-radius: 12px;
-    background: repeating-conic-gradient( #000000,  #da0000, #000000, rgb(214, 0, 0), rgb(0, 0, 0)) ;
+    background: repeating-conic-gradient( #000000,  #850000, #000000, rgb(131, 0, 0), rgb(0, 0, 0)) ;
     }
   .search{
         border-radius: 15px;
@@ -220,4 +220,4 @@ section{
         }
         
 
-        
+    
