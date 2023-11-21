@@ -1,108 +1,3 @@
-
-//  document.addEventListener("DOMContentLoaded", () => {
-
-//     const stateSelect = document.getElementById("state-select");
-
-//     locationsArray.forEach(state => {
-//         const stateOption = new Option (state)
-//         stateSelect.add(stateOption);
-//     });
-
-//     const parkType = document.getElementById("parkType-select");
-
-//     parkTypesArray.forEach(type => {
-//         const typeOption = new Option (type)
-//         parkType.add(typeOption); 
-//     });
-
-
-
-//     filterParks();
-
-//     stateSelect.addEventListener("change", filterParks)
-//     parkType.addEventListener("change", filterParks)
-
-//  })
-
-//     function filterParks(){
-//         const selectedState = document.getElementById("state-select").value;
-//         const selectedParkType = document.getElementById("parkType-select").value;
-
-//         parksFilter = nationalParksArray;
-//         if(selectedState != "Show All"){
-//             parksFilter = nationalParksArray.filter(s => s.State == selectedState)
-//         }
-
-
-//         displayParks(parksFilter);
-
-//     }
-
-//     function displayParks(parksFilter) {
-
-//         const parksContainer = document.querySelector("#content")
-//         parksContainer.classList.add("text-center")
-//         // clear all elements
-//         parksContainer.innerHTML = "";
-    
-//         parksFilter.forEach(parksFilters => {
-    
-//             displayParks(parksFilters, parksContainer);
-            
-//         });
-//     }
-
-    
-// //  --------------------------------
-
-//         function displayNationalPark(parksFilters, parentDiv) {
-//             const parksFiltersDiv = document.createElement("div");
-//             parksFiltersDiv.classList.add("parksFilters");
-//             parksFiltersDiv.id = "parksfilters-" + parksFilters.LocationID;
-//             parentDiv.appendChild(parksFiltersDiv);
-    
-//             addParkHeader(parksFilters, parksFiltersDiv);
-//             addParkDetails(parksFilters, parksFiltersDiv);
-//             // You can add more functions here to display other details of the park
-//         }
-    
-//         function addParkHeader(parksFilter, parksFiltersDiv) {
-//             const parkInfoDiv = document.createElement("div");
-//             parksFiltersDiv.appendChild(parkInfoDiv);
-    
-//             const parkHeader = document.createElement("h4");
-//             parkHeader.innerText = parksFilter.LocationName;
-//             parkInfoDiv.appendChild(parkHeader);
-//         }
-    
-//         function addParkDetails(nationalPark, parkDiv) {
-//             const detailsDiv = document.createElement("div");
-//             parkDiv.appendChild(detailsDiv);
-    
-//             const address = document.createElement("p");
-//             address.innerText = `Address: ${nationalPark.Address}, ${nationalPark.City}, ${nationalPark.State} ${nationalPark.ZipCode}`;
-//             detailsDiv.appendChild(address);
-    
-//             const phone = document.createElement("p");
-//             phone.innerText = `Phone: ${nationalPark.Phone}`;
-//             detailsDiv.appendChild(phone);
-    
-//             // You can add more details such as Fax, Latitude, Longitude, etc.
-//         }
-    
-//         function displayNationalParks(nationalParks) {
-//             const parksContainer = document.querySelector("#content");
-//             parksContainer.innerHTML = "";
-    
-//             nationalParks.forEach(park => {
-//                 displayNationalPark(park, parksContainer);
-//             });
-//         }
-    
-//         // Call the function to initially display all national parks
-//         displayNationalParks(nationalParksArray);
-  
-    
 document.addEventListener('DOMContentLoaded', () => {
     stateDropdown();
     parkTypeDropdown();
@@ -114,6 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
     let parkTypeSelect = document.querySelector('#parkTypeDropdown');
     parkTypeSelect.addEventListener('change', parkFilter);
 }); 
+
+
 
 function parkTypeDropdown() {
     const parkTypeDropdown = document.getElementById("parkTypeDropdown");
@@ -209,7 +106,7 @@ function displayPark(parkFilter, parksContain) {
     // setting the park button
     const parkButton = document.createElement('button');
     parkButton.classList.add('btn', 'btn-primary', 'text-center', 'm-4'); 
-    parkButton.innerText = 'Add to Favorites'; 
+    parkButton.innerText = 'Click to Checkout'; 
 
     parkButton.addEventListener('click', () => {
         addFavorite(parkFilter.LocationID);
