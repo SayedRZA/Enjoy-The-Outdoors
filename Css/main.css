@@ -73,6 +73,13 @@ section{
     
 }
 
+.ex {
+  background: linear-gradient(to right,#7a7a7a, #bfe4ce, #65ff7a, #363636  ) ;
+  /* margin-top: 15%; */
+  min-width: 250px;
+  border-radius: 15px;
+  
+}
 
   /* header .sticky {
     padding: 5px 100px;
@@ -154,5 +161,63 @@ section{
           max-width: 300px; /* Set a maximum width for each park container */
         }
         h3{
-          color: #dadada;
+          color: #ffffff;
+          text-align: center;
+         
         }
+
+        /* ------------footer */
+        .footer{
+          background-color: #000000;
+          color: #8a8a8a;
+          font-size: 14px;
+          padding: 60px 0 20px; 
+        }
+        .footer p{
+          color: #8a8a8a;
+        }
+        .footer h3{
+          color: #fff;
+          margin-bottom:20px ;
+        }
+        .footer-col-1, .footer-col-2, .footer-col-3, .footer-col-4{
+          min-width: 250px;
+          margin-bottom: 20px;
+        }
+        .footer-col-1{
+          flex-basis: 30%;
+        }
+        .footer-col-2{
+          flex: 1;
+          text-align: center;
+        }
+        .footer-col-2 img{
+          width: 80px;
+          margin-bottom: 20px;
+        }
+        .footer-col-3, .footer-col-4{
+          flex-basis: 12%;
+          text-align: center;
+        }
+        ul {
+          list-style-type: none;
+        }
+        .app-logo{
+          margin-top: 20px;
+        }
+        .app-logo img{
+          width: 140px;
+          
+        }
+        .footer hr{
+          border: none;
+          background: #b5b5b5;
+          height: 1px;
+          margin: 20px 0;
+        }
+        .copyright{
+          text-align: center;
+        }
+        
+
+        
